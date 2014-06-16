@@ -35,15 +35,24 @@ while($row = mysqli_fetch_assoc($getlasttotal))										//Associate the query w
     }  
 
 }
-echo "AVERAGE: ".$average = array_sum($lasttotal) / $i."<br/>";				//Get array average
+echo "AVERAGE: ".$average = array_sum($lasttotal) / 60."<br/>";				//Get array average
 
 //MANUAL OVERRIDE
-$diff = 10;
+$diff = $average;
 
 //DIFFERENT IMAGE TIER
 if ($diff >= 200) {
-	$img = "/images/jigglypuff2.png";
+	$img = "/images/jigglypuff5.png";
 	$width= "861";
+} else if ($diff >= 0) {
+	$img = "/images/jigglypuff4.png";
+	$width="86";
+} else if ($diff >= 0) {
+	$img = "/images/jigglypuff3.png";
+	$width="86";
+} else if ($diff >= 0) {
+	$img = "/images/jigglypuff2.png";
+	$width="86";
 } else if ($diff >= 0) {
 	$img = "/images/jigglypuff.png";
 	$width="86";
