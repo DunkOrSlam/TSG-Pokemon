@@ -22,16 +22,14 @@ $getlasttotal = $link->query("SELECT donation_amount FROM dc_donations WHERE dt 
 
 //USE QUERIED INFO
 printf("Number of rows: %d.\n", mysqli_num_rows($getlasttotal));				//Print number of rows for double checking the query
-
-$i = 0;																									//Set initial interval value for loop
+																								//Set initial interval value for loop
 
 while($row = mysqli_fetch_assoc($getlasttotal))										//Associate the query with an array
 {
 	foreach($row as $fieldname => $fieldvalue)											//For each value in the array loop
 	{
-		$lasttotal[$i] = $row['donation_amount'];											//Setup array for echoing
-    	echo "Donation total: $".$lasttotal[$i]."<br/>";									//Echo Array
-		$i++;																							//Increment interval
+		$lasttotal = $row['donation_amount'];											//Setup array for echoing
+    	echo "Donation total: $".$lasttotal."<br/>";									//Echo Array																							//Increment interval
     }  
 
 }
