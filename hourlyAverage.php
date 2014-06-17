@@ -35,7 +35,7 @@ while($row = mysqli_fetch_assoc($getlasttotal))										//Associate the query w
     }  
 
 }
-echo "AVERAGE: ".$average = array_sum($lasttotal) / 60."<br/>";	  //probably shouldnt average			//Get array average
+echo "AVERAGE: ".$average = array_sum($lasttotal)."<br/>";	  //probably shouldnt average			//Get array average
 
 //MANUAL OVERRIDE
 $diff = $average;
